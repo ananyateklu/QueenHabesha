@@ -1,0 +1,77 @@
+.Logo {
+    width: 300px;
+    margin-left: 100px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.LinkDiv li {
+    display: inline;
+    margin-right: 60px;
+}
+
+li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.Links {
+    float: right;
+    margin-top: 60px;
+    margin-right: 300px;
+}
+
+.Links ul li {
+    color: rgba(255, 255, 255, 0.884);
+    margin-bottom: 25px;
+}
+
+.LogoDiv {
+    display: inline-block;
+}
+
+.LinkDiv {
+    float: right;
+    margin-top: 10px;
+}
+
+.BookingButton {
+    border: solid 2px gray;
+    padding: 5px 20px 5px 20px;
+}
+
+.BookingButtonDark {
+    border: solid 2px gray;
+    padding: 5px 20px 5px 20px;
+    color: rgba(255, 255, 255, 0.884);
+    margin-left: 10px;
+    width: 140px;
+    
+}
+
+.Salon {
+    width: 100%;
+}
+
+.FooterDiv {
+    background-color: black;
+    height: 350px;
+    margin-top: 80px;
+}
+
+.FooterLogo {
+    width: 350px;
+    margin-left: 30px;
+}
+
+.FooterLeft {
+    display: inline-block;
+}
+
+h5 {
+    color: rgba(255, 255, 255, 0.884);
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
