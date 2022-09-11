@@ -52,6 +52,7 @@ li a {
 
 .Salon {
   width: 100%;
+  margin-bottom: 100px;
 }
 
 .FooterDiv {
@@ -94,4 +95,5 @@ h5 {
 .carousel {
   cursor: grab;
   overflow: hidden;
+  margin-bottom: 150px;
 }
