@@ -1,7 +1,7 @@
 .Logo {
   width: 300px;
   margin-left: 15px;
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 ul {
@@ -54,6 +54,7 @@ li a {
 .Salon {
   width: 100%;
   margin-bottom: 100px;
+  margin-top: 5px;
 }
 
 .FooterDiv {
