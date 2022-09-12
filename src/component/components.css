@@ -101,6 +101,40 @@ h5 {
   margin-bottom: 150px;
 }
 
+.ServicesHome {
+    text-align: center;
+}
+
+.ServicesHome img {
+    width: 10em;
+    padding: 10px 100px 10px 100px;
+    margin-top: 50px;
+}
+
+.ServicesHome div {
+    display: inline-block;
+}
+
+.ServicesHome h1 {
+    font-weight: 500;
+}
+.ServicesHome h2 {
+    font-weight: 300;
+}
+
+.ServicesHome ul  {
+    padding: 0;
+    margin-top: 50px;
+    
+}
+
+.ServicesHome li {
+    width: 10em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media only screen and (max-width: 600px) {
     .Logo {
         width: 300px;
