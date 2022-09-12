@@ -7,6 +7,8 @@ const Afro = require("../assets/Afro.png");
 const Curls = require("../assets/Curly.png");
 const Straight = require("../assets/Straight.png");
 const Locks = require("../assets/Locks.png");
+const Helen = require("../assets/Helen.png");
+const Mekdes = require("../assets/Mekdes.jpg");
 
 const Home = () => {
   const [width, setWidth] = useState(0);
@@ -71,6 +73,17 @@ const Home = () => {
         <ul>
           <li className='BookingButton'>BOOKING</li>
         </ul>
+      </div>
+      <div className="OurCrew">
+        <h1>OUR CREW</h1>
+        <div>
+          <img src={Helen} alt="Straight"></img>
+          <h2>HELEN HAILU</h2>
+        </div>
+        <div>
+          <img src={Mekdes} alt="Straight"></img>
+          <h2>MEKDES</h2>
+        </div>
       </div>
     </div>
   );

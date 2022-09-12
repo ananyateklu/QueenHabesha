@@ -106,8 +106,8 @@ h5 {
 }
 
 .ServicesHome img {
-    width: 10em;
-    padding: 10px 100px 10px 100px;
+    width: 6em;
+    padding: 10px 80px 10px 80px;
     margin-top: 50px;
 }
 
@@ -133,6 +133,29 @@ h5 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.OurCrew {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.OurCrew h1 {
+    font-weight: 500;
+}
+.OurCrew h2 {
+    font-weight: 300;
+}
+
+.OurCrew div {
+    display: inline-block;
+}
+
+.OurCrew img {
+    width: 17em;
+    margin-top: 50px;
+    border-radius: 2em;
+    margin: 100px 100px 10px 100px;
 }
 
 @media only screen and (max-width: 600px) {
