@@ -79,11 +79,16 @@ const Home = () => {
         <div>
           <img src={Helen} alt="Straight"></img>
           <h2>HELEN HAILU</h2>
+          <h3>HAIR STYLIST</h3>
         </div>
         <div>
           <img src={Mekdes} alt="Straight"></img>
           <h2>MEKDES</h2>
+          <h3>HAIR STYLIST</h3>
         </div>
+        <ul>
+          <li className='BookingButton'>CONTACT US</li>
+        </ul>
       </div>
     </div>
   );
