@@ -149,13 +149,14 @@ h5 {
 
 .OurCrew div {
     display: inline-block;
+    margin-left: 0px;
 }
 
 .OurCrew img {
     width: 17em;
     margin-top: 50px;
     border-radius: 2em;
-    margin: 100px 100px 10px 100px;
+    margin: 100px 80px 10px 80px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -163,4 +164,11 @@ h5 {
         width: 300px;
         margin-left: 0;
       }
+      
+      .OurCrew img {
+        width: 17em;
+        margin-top: 50px;
+        border-radius: 2em;
+        margin: 50px 0px 10px 0px;
+    }
 }
