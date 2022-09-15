@@ -177,6 +177,59 @@ h5 {
     margin-right: auto;
 }
 
+.ContactUs {
+    background-color: white;
+    margin-right: 10%;
+    margin-left: 10%;
+    height: 45em;
+    margin-top: 5%;
+    text-align: center;
+}
+.ContactUs img {
+    height: 45em;
+    float: right;
+}
+.ContactUsInfo {
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 30px;
+    display: inline-block;
+    width: 45%;
+}
+
+.ContactUsInfo h1 {
+    font-weight: 700;
+    color: #505050;
+}
+
+.ContactUsInfo h3 {
+    font-weight: 300;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.ContactUsInfo h4 {
+    font-weight: 400;
+    margin-top: 10px;
+}
+.BookingButtonContact {
+    width: 150px;
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+    border: 2px solid #505050;
+}
+
+.ContactUsInfo ul {
+    margin-top: 20px;
+    padding: 0;
+}
+.BookingButtonContact li {
+    margin: 0;
+    padding: 0;
+}
+
+
 @media only screen and (max-width: 600px) {
     .Logo {
         width: 300px;
