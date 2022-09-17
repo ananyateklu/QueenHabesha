@@ -229,6 +229,54 @@ h5 {
     padding: 0;
 }
 
+.HairStylistDiv {
+  width: 25%;
+  height: 400px;
+  margin-left: 50px;
+  background-color: white;
+  display: inline-block;
+}
+
+.HairStylistDiv img {
+  width: 80px;
+  border-radius: 100%;
+  margin: 20px;
+  display: inline-block;
+}
+
+.HairStylistDiv h3 {
+  margin: 40px 20px 20px 20px;
+  float: right;
+}
+
+.HairStylistDiv h4 {
+  margin: 10px 10px 10px 20px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.HairStylistDiv h6 {
+  margin: 10px 20px 10px 20px;
+  font-size: 13px;
+  font-weight: 400;
+}
+.AppointmentDiv {
+  width: 60%;
+  height: 400px;
+  margin-left: 100px;
+  margin-right: 50px;
+  background-color: white;
+  float: right;
+  text-align: center;
+}
+.TestInput {
+  width: 200px;
+  margin: 30px;
+}
+.SignIn {
+  width: 100px;
+  height: 20px;
+  margin: 30px;
+}
 
 @media only screen and (max-width: 600px) {
     .Logo {
