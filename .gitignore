@@ -422,3 +422,5 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+API/appointment.db-shm
+API/appointment.db-wal
