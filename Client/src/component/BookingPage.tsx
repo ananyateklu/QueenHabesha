@@ -27,11 +27,11 @@ const BookingPage = () => {
                 <div className='AppointmentListDiv'>
                     {appointments.map((appointment: any) => (
                         <div className='AppointmentList'>
-                            <h6 key={appointment.id}>
-                                {appointment.name}
+                             <h6 key={appointment.id}>
+                                {appointment.date}
                             </h6>
                             <h6 key={appointment.id}>
-                                {appointment.date}
+                                {appointment.name}
                             </h6>
                             <h6 key={appointment.id}>
                                 {appointment.price}

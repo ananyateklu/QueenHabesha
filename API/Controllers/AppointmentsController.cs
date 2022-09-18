@@ -2,27 +2,24 @@ using Domain;
 using Microsoft.AspNetCore.Mvc;
 using Persistance;
 using Microsoft.EntityFrameworkCore;
+using Application.Appointments;
 
 namespace API.Controllers
 {
     public class AppointmentsController : BaseApiController
     {
-        private readonly DataContext _context;
-        public AppointmentsController(DataContext context)
-        {
-            _context = context;
-        }
+    
 
         [HttpGet]
-        public async Task<ActionResult<List<Appointment>>> GetAppointments() 
+        public async Task<ActionResult<List<Appointment>>> GetAppointments()
         {
-            return await _context.Appointments.ToListAsync();
+            return await Mediator.Send(new Application.Appointments.List.Query());
         }
 
         [HttpGet("{id}")] // Appointment Id
         public async Task<ActionResult<Appointment>> GetAppointment(Guid id)
         {
-            return await _context.Appointments.FindAsync(id);
+            return await Mediator.Send(new Details.Query{Id = id});
         }
     }
 }
