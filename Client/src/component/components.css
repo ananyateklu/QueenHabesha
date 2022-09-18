@@ -231,7 +231,7 @@ h5 {
 
 .HairStylistDiv {
   width: 25%;
-  height: 400px;
+  height: 500px;
   margin-left: 50px;
   background-color: white;
   display: inline-block;
@@ -261,12 +261,10 @@ h5 {
 }
 .AppointmentDiv {
   width: 60%;
-  height: 400px;
-  margin-left: 100px;
+  height: 500px;
   margin-right: 50px;
   background-color: white;
   float: right;
-  text-align: center;
 }
 .TestInput {
   width: 200px;
@@ -277,6 +275,15 @@ h5 {
   height: 20px;
   margin: 30px;
 }
+.AppointmentListDiv {
+  margin-left: 30px;
+}
+
+.AppointmentList h6 {
+  display: inline-block;
+  margin: 10px 20px 10px 20px;
+}
+
 
 @media only screen and (max-width: 600px) {
     .Logo {
