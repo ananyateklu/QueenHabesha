@@ -90,7 +90,9 @@ const Home = () => {
           <li className='BookingButton'>CONTACT US</li>
         </ul>
       </div>
-      
+      <div className="Testimonials OurCrew">
+        <h1>TESTIMONIALS</h1>
+        </div>
       <div className="container">
         
       <div className="row">
