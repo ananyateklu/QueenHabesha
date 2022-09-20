@@ -7,7 +7,7 @@ const BookingPage = () => {
     const [appointments, setAppointments] = useState([]);
 
     useEffect(() => {
-        axios.get('https://localhost:5000/api/appointments').then(response => {
+        axios.get('http://localhost:5000/api/appointments').then(response => {
             console.log(response);
             setAppointments(response.data);
         })
