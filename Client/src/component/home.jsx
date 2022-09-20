@@ -46,7 +46,7 @@ const Home = () => {
           })}
         </motion.div>
       </motion.div>
-      <div className="ServicesHome">
+      <div className="ServicesHome" id="Services">
         <h1>SERVICES WE OFFER</h1>
         <div>
           <img src={Braids} alt="Braids"></img>
