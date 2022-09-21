@@ -1,17 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React, { ReactNode, useEffect, useState } from 'react'
 import axios from 'axios';
+import { format, parseISO } from 'date-fns';
 
 const Helen = require("../assets/Helen.png");
 const BookingPage = () => {
 
-    const [appointments, setAppointments] = useState([]);
+    const [appointments, setAppointments] = useState([] as any);
 
     useEffect(() => {
-        axios.get('https://localhost:5000/api/appointments').then(response => {
+        axios.get<Appointment>('https://localhost:5000/api/appointments').then(response => {
             console.log(response);
             setAppointments(response.data);
         })
     }, [])
+
+    interface Appointment {
+        id: string;
+        name: string;
+        date: string;
+        price: BigInteger;
+        stylist: string;
+
+    }
 
     return (
         <div className='BookingPage'>
@@ -25,20 +35,42 @@ const BookingPage = () => {
                 <input className='TestInput'></input>
                 <button className='SignIn'>Sign In</button>
                 <div className='AppointmentListDiv'>
-                    {appointments.map((appointment: any) => (
-                        <div className='AppointmentList'>
-                             <h6 key={appointment.id}>
-                                {appointment.date}
-                            </h6>
-                            <h6 key={appointment.id}>
+                    <div className='Title'>
+                    <div className='Apptime'>
+                                <p>Time</p>
+                            </div>
+                            <div className='Appdate'>
+                                <p>Date</p>
+                            </div>
+
+                            <div className='Appname'>
+                                <p>Name</p>
+                            </div>
+                            <div className='Appprice'>
+                                <p>Price</p>
+                            </div>
+                            <div className='Appstylist'>
+                                <p>Stylist</p>
+                            </div>
+                    </div>
+                    {appointments.map((appointment: Appointment) => (
+                        <div className='AppointmentList' key={appointment.id}>
+                            <div className='Apptime'>
+                                {format(parseISO(appointment.date), 'h:mm aa')}
+                            </div>
+                            <div className='Appdate'>
+                                {format(parseISO(appointment.date), 'dd MMM yyyy')}
+                            </div>
+
+                            <div className='Appname'>
                                 {appointment.name}
-                            </h6>
-                            <h6 key={appointment.id}>
+                            </div>
+                            <div className='Appprice'>
                                 {appointment.price}
-                            </h6>
-                            <h6 key={appointment.id}>
+                            </div>
+                            <div className='Appstylist'>
                                 {appointment.stylist}
-                            </h6>
+                            </div>
                         </div>
 
 
