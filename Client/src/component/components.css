@@ -212,6 +212,8 @@ h5 {
     font-weight: 400;
     margin-top: 10px;
 }
+
+
 .BookingButtonContact {
     width: 150px;
     display: inline-block;
@@ -265,19 +267,19 @@ h5 {
   margin-right: 50px;
   background-color: white;
   float: right;
+  overflow: scroll;
 }
 .TestInput {
-  width: 200px;
-  margin: 30px;
+  width: 150px;
+  margin: 20px;
 }
 .SignIn {
   width: 100px;
   height: 20px;
-  margin: 30px;
+  margin: 20px;
 }
 .AppointmentListDiv {
   margin-left: 30px;
-  overflow: scroll;
 }
 
 .Title .Apptime {
@@ -301,6 +303,10 @@ h5 {
   width: 20px;
 }
 
+.Title {
+  margin-left: 40px;
+}
+
 .Title .Appstylist {
   display: inline-block;
   margin: 10px 20px 10px 20px;
@@ -312,7 +318,6 @@ h5 {
   border-radius: 10px;
   width: auto;
   margin: 10px;
-  display: flex;
   
 }
 

@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { format, parseISO } from 'date-fns';
 
@@ -30,29 +30,29 @@ const BookingPage = () => {
                 <h3>MAKE APPOINTMENT</h3>
                 <h4>HELEN HAILU </h4>
                 <h6>Please choose a time that works best for you. I look forward to working with you!</h6>
-            </div>
-            <div className='AppointmentDiv'>
                 <input className='TestInput'></input>
                 <button className='SignIn'>Sign In</button>
-                <div className='AppointmentListDiv'>
-                    <div className='Title'>
+            </div>
+            <div className='AppointmentDiv'>
+                <div className='Title'>
                     <div className='Apptime'>
-                                <p>Time</p>
-                            </div>
-                            <div className='Appdate'>
-                                <p>Date</p>
-                            </div>
-
-                            <div className='Appname'>
-                                <p>Name</p>
-                            </div>
-                            <div className='Appprice'>
-                                <p>Price</p>
-                            </div>
-                            <div className='Appstylist'>
-                                <p>Stylist</p>
-                            </div>
+                        <p>Time</p>
                     </div>
+                    <div className='Appdate'>
+                        <p>Date</p>
+                    </div>
+
+                    <div className='Appname'>
+                        <p>Name</p>
+                    </div>
+                    <div className='Appprice'>
+                        <p>Price</p>
+                    </div>
+                    <div className='Appstylist'>
+                        <p>Stylist</p>
+                    </div>
+                </div>
+                <div className='AppointmentListDiv'>
                     {appointments.map((appointment: Appointment) => (
                         <div className='AppointmentList' key={appointment.id}>
                             <div className='Apptime'>
