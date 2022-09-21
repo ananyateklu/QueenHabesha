@@ -35,6 +35,7 @@ const BookingPage = () => {
             </div>
             <div className='AppointmentDiv'>
                 <div className='Title'>
+                    <h2>Appointments</h2>
                     <div className='Apptime'>
                         <p>Time</p>
                     </div>
@@ -59,7 +60,7 @@ const BookingPage = () => {
                                 {format(parseISO(appointment.date), 'h:mm aa')}
                             </div>
                             <div className='Appdate'>
-                                {format(parseISO(appointment.date), 'dd MMM yyyy')}
+                                {format(parseISO(appointment.date), 'dd MMM yy')}
                             </div>
 
                             <div className='Appname'>
