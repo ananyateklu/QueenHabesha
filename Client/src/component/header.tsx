@@ -13,7 +13,9 @@ const Header = () => {
             <div className='LinkDiv'>
                 <ul>
                     <li><NavLink to="/">HOME</NavLink></li>
-                    <li><NavLink to="/">SERVICES</NavLink></li>
+                    
+                    <li onClick={(e) => {e.preventDefault(); window.location.replace('/#Services');}}><NavLink to="/" >SERVICES</NavLink></li>
+                    
                     <li><NavLink to="/">OUR CREW</NavLink></li>
                     <li><NavLink to="/contactUs">CONTACT US</NavLink> </li>
                     <li className='BookingButton'><NavLink to="/booking">BOOKING</NavLink></li>
