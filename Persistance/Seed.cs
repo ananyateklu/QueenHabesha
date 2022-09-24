@@ -12,7 +12,7 @@ namespace Persistence
         public static async Task SeedData(DataContext context)
         {
             if (context.Appointments.Any()) return;
-            
+
             var appointments = new List<Appointment>
             {
                 new Appointment
@@ -87,7 +87,49 @@ namespace Persistence
                 }
             };
 
+            if (context.Users.Any()) return;
+
+            var users = new List<User>
+            {
+                new User
+                {
+                    Name = "Helen Hailu",
+                    IsStylist = true,
+                },
+                 new User
+                {
+                    Name = "Dimber Sena",
+                    IsStylist = false,
+                },
+                new User
+                {
+                    Name = "Mekdes Hailu",
+                    IsStylist = true,
+                },
+                 new User
+                {
+                    Name = "Abeba Debebe",
+                    IsStylist = false,
+                },
+                 new User
+                {
+                    Name = "Alitash Ayalu",
+                    IsStylist = false,
+                },
+                new User
+                {
+                    Name = "Ayana Burka",
+                    IsStylist = false,
+                },
+                 new User
+                {
+                    Name = "Dinkinesh Alemu",
+                    IsStylist = false,
+                }
+            };
+
             await context.Appointments.AddRangeAsync(appointments);
+            await context.Users.AddRangeAsync(users);
             await context.SaveChangesAsync();
         }
     }
