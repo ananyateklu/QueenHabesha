@@ -11,5 +11,7 @@ namespace Persistance
         }
 
         public DbSet<Appointment> Appointments { get; set; }
+
+        public DbSet<User> Users { get; set;}
     }
 }
