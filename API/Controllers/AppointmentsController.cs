@@ -27,5 +27,12 @@ namespace API.Controllers
         {
             return Ok(await Mediator.Send(new Create.Command {Appointment = appointment}));
         }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult> EditAppointment(Guid id, Appointment appointment)
+        {
+            appointment.Id = id;
+            return Ok(await Mediator.Send(new Edit.Command{Appointment = appointment}));
+        }
     }
 }

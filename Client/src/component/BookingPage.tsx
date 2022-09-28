@@ -16,22 +16,24 @@ const BookingPage = () => {
 
 
     useEffect(() => {
-        if (user?.id !== '81e52375-2ed3-406c-bf89-08da9c129865' && user?.id !== '87f3e8ae-465e-4bb8-bf8b-08da9c129865') {
-            axios.get<Appointment>(`https://localhost:5000/api/appointments/${showInput}`).then(response => {
+
+        axios.get<Appointment>(`http://localhost:5000/api/appointments/${showInput}`).then(response => {
+            if (user?.id !== '81e52375-2ed3-406c-bf89-08da9c129865' && user?.id !== '87f3e8ae-465e-4bb8-bf8b-08da9c129865') {
                 loginUser(selectedUser?.isStylist, appointments, response.data);
-            })
-        }
+            }
+        })
+
 
     }, [user?.id])
 
     useEffect(() => {
-        axios.get<User[]>('https://localhost:5000/api/User').then(response => {
+        axios.get<User[]>('http://localhost:5000/api/User').then(response => {
             setUsers(response.data);
         })
     }, [])
 
     useEffect(() => {
-        axios.get<Appointment[]>('https://localhost:5000/api/appointments').then(response => {
+        axios.get<Appointment[]>('http://localhost:5000/api/appointments').then(response => {
             loginUser(selectedUser?.isStylist, response.data, selectAppointment);
         })
     }, [selectedUser?.id])
@@ -49,7 +51,7 @@ const BookingPage = () => {
         setSelectedUser(users.find(x => x.id === id));
     }
 
-  
+
     function loginUser(isStylist: Boolean | undefined, appointments: Appointment[] | undefined, appointment: Appointment | undefined) {
         if (isStylist === true && appointments !== undefined) {
             setAppointments(appointments);
