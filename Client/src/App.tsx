@@ -6,6 +6,7 @@ import ContactUs from './component/contactus';
 import Booking from './component/BookingPage';
 import Header from './component/header';
 import Footer from './component/footer';
+import "./component/styles.css";
 
 const App: React.FC = () => {
   return (
