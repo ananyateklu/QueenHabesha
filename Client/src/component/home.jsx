@@ -1,8 +1,22 @@
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState, React } from "react";
 import styleImages from "./styleImages";
-import testimonialSwiper from "./testimonialSwiper";
+
 import Service from "./services";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+
+
+
+// import required modules
+import { EffectCoverflow, Pagination, Autoplay } from "swiper";
+
 const Salon = require("../assets/Salon.jpg");
 const Braids = require("../assets/Braids.png");
 const Afro = require("../assets/Afro.png");
@@ -81,7 +95,84 @@ function Home() {
 
 
         
-         <testimonialSwiper />
+      <Swiper
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        autoplay={{delay:5000}}
+        pagination={false}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
+        className="mySwiper"
+        loop={true}
+      >
+        <SwiperSlide>
+        <div className="testimonialBox">
+                    <img src={quote.png} className="quote" alt=""></img>
+                    <div className="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus, dui vel rhoncus elementum,
+                             lorem velit posuere nulla, nec accumsan leo felis eget tellus. Sed laoreet ipsum suscipit, dapibus 
+                             sapien a, dignissim elit. Sed odio felis, condimentum nec augue at, iaculis feugiat massa. Duis a 
+                             sollicitudin ipsum, sed blandit magna.</p>
+                            </div> 
+                             <div className="details">
+                      <div className="imgBx">
+                        <img src={user1.jpg} alt=""></img >
+                      </div>
+                      <h3>Someone Famous<br/><span>
+                        Creative Designer
+                      </span></h3>
+                    </div> 
+                  </div>
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className="testimonialBox">
+                    <img src={quote.png} className="quote" alt=""></img>
+                    <div className="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus, dui vel rhoncus elementum,
+                             lorem velit posuere nulla, nec accumsan leo felis eget tellus. Sed laoreet ipsum suscipit, dapibus 
+                             sapien a, dignissim elit. Sed odio felis, condimentum nec augue at, iaculis feugiat massa. Duis a 
+                             sollicitudin ipsum, sed blandit magna.</p>
+                            </div> 
+                             <div className="details">
+                      <div className="imgBx">
+                        <img src={user2.jpg} alt=""></img >
+                      </div>
+                      <h3>Someone Famous<br/><span>
+                        Creative Designer
+                      </span></h3>
+                    </div> 
+                  </div>
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className="testimonialBox">
+                    <img src={quote.png} className="quote" alt=""></img>
+                    <div className="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus, dui vel rhoncus elementum,
+                             lorem velit posuere nulla, nec accumsan leo felis eget tellus. Sed laoreet ipsum suscipit, dapibus 
+                             sapien a, dignissim elit. Sed odio felis, condimentum nec augue at, iaculis feugiat massa. Duis a 
+                             sollicitudin ipsum, sed blandit magna.</p>
+                            </div> 
+                             <div className="details">
+                      <div className="imgBx">
+                        <img src={user3.jpg} alt=""></img >
+                      </div>
+                      <h3>Someone Famous<br/><span>
+                        Creative Designer
+                      </span></h3>
+                    </div> 
+                  </div>
+        </SwiperSlide>
+        
+        
+      </Swiper>
 
 
 
