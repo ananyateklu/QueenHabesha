@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { format, parseISO } from 'date-fns';
+import jwt_decode from 'jwt-decode';
 
+declare const google: any;
 const Helen = require("../assets/Helen.png");
 const Mekdes = require("../assets/Mekdes.jpg");
 const LoginPic = require("../assets/Hair17.jpg");
@@ -14,7 +16,28 @@ const BookingPage = () => {
     const [selectAppointment, setSelectAppointment] = useState<Appointment>();
     const [selectedUser, setSelectedUser] = useState<User | undefined>(undefined);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [googleUser, setGoogleUser] = useState<googleUser | undefined>();
 
+    function handleCallbackResponse(response: any) {
+        console.log("Encoded JWT ID Token:" + response.credential);
+        var userObject = jwt_decode<googleUser | undefined>(response.credential);
+        console.log(userObject);
+        setGoogleUser(userObject);
+        setIsLoggedIn(true);
+    }
+
+    useEffect(() => {
+        /*global google */
+        google.accounts.id.initialize({
+            client_id: "121288548848-7h61a32lpelv8k3hiaj52lsum47njhui.apps.googleusercontent.com",
+            callback: handleCallbackResponse
+        });
+
+        google.accounts.id.renderButton(
+            document.getElementById('signInDiv'),
+            {theme: "outline", size: "large"}
+        )
+    }, [])
 
     useEffect(() => {
 
@@ -87,6 +110,13 @@ const BookingPage = () => {
 
     }
 
+    interface googleUser {
+        id: string | undefined;
+        name: string;
+        isStylist: Boolean;
+
+    }
+
     return (
         <div className='BookingPage'>
             <div className='Booking'>
@@ -100,6 +130,7 @@ const BookingPage = () => {
                             <div>
                                 <input className='TestInput' onChange={e => handleChange(e)} ></input>
                                 <button className='SignIn' onClick={() => handleSelectUser(showInput)}>Sign In</button>
+                                <div id='signInDiv'></div>
                             </div>
                         </div>
                         <img className='LoginPic' src={LoginPic} alt='LoginPic'></img>
@@ -115,7 +146,7 @@ const BookingPage = () => {
                             <h6>Hello! This are the list of appointments you have</h6>}
                         {user?.name === "Mekdes Hailu" &&
                             <h6>Hello! This are the list of appointments you have</h6>}
-                            <h4>{user?.name}</h4>
+                            <h4>{googleUser?.name}</h4>
                             <button className='SignOut' onClick={() => handleLogOut()}>Sign Out</button>
                     </div>}
             </div>
