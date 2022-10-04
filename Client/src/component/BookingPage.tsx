@@ -18,13 +18,25 @@ const BookingPage = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [googleUser, setGoogleUser] = useState<googleUser | undefined>();
 
-    function handleCallbackResponse(response: any) {
+    const handleCallbackResponse = async (response: any) => {
+        
         console.log("Encoded JWT ID Token:" + response.credential);
         var userObject = jwt_decode<googleUser | undefined>(response.credential);
         console.log(userObject);
         setGoogleUser(userObject);
         setIsLoggedIn(true);
+        // store the user in localStorage
+        localStorage.setItem('userObject', response.credential);
     }
+
+    useEffect(() => {
+        const loggedInUser = localStorage.getItem("userObject");
+        if (loggedInUser) {
+          var userObject = jwt_decode<googleUser | undefined>(loggedInUser);
+          setGoogleUser(userObject);
+          setIsLoggedIn(true);
+        }
+      }, []);
 
     useEffect(() => {
         /*global google */
@@ -62,18 +74,18 @@ const BookingPage = () => {
         })
     }, [selectedUser?.id])
 
-    const handleChange: any = (event: any): void => {
-        event.preventDefault();
-        handleSubmit(event);
-    }
+    // const handleChange: any = (event: any): void => {
+    //     event.preventDefault();
+    //     handleSubmit(event);
+    // }
 
-    const handleSubmit: any = (event: any): void => {
-        setShowInput(event.target.value);
-    }
+    // const handleSubmit: any = (event: any): void => {
+    //     setShowInput(event.target.value);
+    // }
 
-    function handleSelectUser(id: string) {
-        setSelectedUser(users.find(x => x.id === id));
-    }
+    // function handleSelectUser(id: string) {
+    //     setSelectedUser(users.find(x => x.id === id));
+    // }
 
 
     function loginUser(isStylist: Boolean | undefined, appointments: Appointment[] | undefined, appointment: Appointment | undefined) {
@@ -90,7 +102,10 @@ const BookingPage = () => {
     }
 
     function handleLogOut() {
+        localStorage.removeItem('userObject');
+        window.location.reload();
         setIsLoggedIn(false);
+        setGoogleUser(undefined);
         setSelectedUser(undefined);
     }
 
@@ -113,7 +128,7 @@ const BookingPage = () => {
     interface googleUser {
         id: string | undefined;
         name: string;
-        isStylist: Boolean;
+        picture: string;
 
     }
 
@@ -128,9 +143,9 @@ const BookingPage = () => {
                             <h3>MAKE APPOINTMENT</h3>
                             <h6>Login in to make an appointment or view your appointment.</h6>
                             <div>
-                                <input className='TestInput' onChange={e => handleChange(e)} ></input>
-                                <button className='SignIn' onClick={() => handleSelectUser(showInput)}>Sign In</button>
-                                <div id='signInDiv'></div>
+                                {/* <input className='TestInput' onChange={e => handleChange(e)} ></input>
+                                <button className='SignIn' onClick={() => handleSelectUser(showInput)}>Sign In</button> */}
+                                <button id='signInDiv'></button>
                             </div>
                         </div>
                         <img className='LoginPic' src={LoginPic} alt='LoginPic'></img>
@@ -147,6 +162,7 @@ const BookingPage = () => {
                         {user?.name === "Mekdes Hailu" &&
                             <h6>Hello! This are the list of appointments you have</h6>}
                             <h4>{googleUser?.name}</h4>
+                            <img src={googleUser?.picture} alt="test"></img>
                             <button className='SignOut' onClick={() => handleLogOut()}>Sign Out</button>
                     </div>}
             </div>
