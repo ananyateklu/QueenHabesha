@@ -18,11 +18,6 @@ import "swiper/css/autoplay";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 
 const Salon = require("../assets/Salon.jpg");
-const Braids = require("../assets/Braids.png");
-const Afro = require("../assets/Afro.png");
-const Curls = require("../assets/Curly.png");
-const Straight = require("../assets/Straight.png");
-const Locks = require("../assets/Locks.png");
 const Helen = require("../assets/Helen.png");
 const Mekdes = require("../assets/Mekdes.jpg");
 const quote = require("../assets/quote.png")
@@ -104,7 +99,7 @@ function Home() {
           rotate: 0,
           stretch: 0,
           depth: 100,
-          modifier: 1,
+          modifier: 2,
           slideShadows: true,
         }}
         autoplay={{delay:5000}}
@@ -115,7 +110,7 @@ function Home() {
       >
         <SwiperSlide>
         <div className="testimonialBox">
-                    <img src={quote.png} className="quote" alt=""></img>
+                    <img src={quote} className="quote" alt=""></img>
                     <div className="content">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus, dui vel rhoncus elementum,
                              lorem velit posuere nulla, nec accumsan leo felis eget tellus. Sed laoreet ipsum suscipit, dapibus 
@@ -124,7 +119,7 @@ function Home() {
                             </div> 
                              <div className="details">
                       <div className="imgBx">
-                        <img src={user1.jpg} alt=""></img >
+                        <img src={user1} alt=""></img >
                       </div>
                       <h3>Someone Famous<br/><span>
                         Creative Designer
@@ -134,7 +129,7 @@ function Home() {
         </SwiperSlide>
         <SwiperSlide>
         <div className="testimonialBox">
-                    <img src={quote.png} className="quote" alt=""></img>
+                    <img src={quote} className="quote" alt=""></img>
                     <div className="content">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus, dui vel rhoncus elementum,
                              lorem velit posuere nulla, nec accumsan leo felis eget tellus. Sed laoreet ipsum suscipit, dapibus 
@@ -143,7 +138,7 @@ function Home() {
                             </div> 
                              <div className="details">
                       <div className="imgBx">
-                        <img src={user2.jpg} alt=""></img >
+                        <img src={user2} alt=""></img >
                       </div>
                       <h3>Someone Famous<br/><span>
                         Creative Designer
@@ -153,7 +148,7 @@ function Home() {
         </SwiperSlide>
         <SwiperSlide>
         <div className="testimonialBox">
-                    <img src={quote.png} className="quote" alt=""></img>
+                    <img src={quote} className="quote" alt=""></img>
                     <div className="content">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus, dui vel rhoncus elementum,
                              lorem velit posuere nulla, nec accumsan leo felis eget tellus. Sed laoreet ipsum suscipit, dapibus 
@@ -162,7 +157,7 @@ function Home() {
                             </div> 
                              <div className="details">
                       <div className="imgBx">
-                        <img src={user3.jpg} alt=""></img >
+                        <img src={user3} alt=""></img >
                       </div>
                       <h3>Someone Famous<br/><span>
                         Creative Designer
