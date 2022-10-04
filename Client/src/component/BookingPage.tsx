@@ -88,13 +88,22 @@ const BookingPage = () => {
 
     return (
         <div className='BookingPage'>
-            <div className='HairStylistDiv'>
+            <div className='Booking'>
 
-                <h3>MAKE APPOINTMENT</h3>
+
                 {isLoggedIn === false &&
-                    <h6>Login in to make an appointment or view your appointment.</h6>}
+                    <div className='HairStylistDiv'>
+                        <div><h3>MAKE APPOINTMENT</h3>
+                            <h6>Login in to make an appointment or view your appointment.</h6>
+                            <div>
+                                <input className='TestInput' onChange={e => handleChange(e)} ></input>
+                                <button className='SignIn' onClick={() => handleSelectUser(showInput)}>Sign In</button>
+                            </div>
+                        </div>
+                    </div>
+                }
                 {isLoggedIn === true &&
-                    <div>
+                    <div className='BookingAppointmentDiv' >
                         {user?.name === "Helen Hailu" &&
                             <img src={Helen} alt="Hair Styles" />}
                         {user?.name === "Mekdes Hailu" &&
@@ -104,16 +113,8 @@ const BookingPage = () => {
                             <h6>Hello! This are the list of appointments you have</h6>}
                         {user?.name === "Mekdes Hailu" &&
                             <h6>Hello! This are the list of appointments you have</h6>}
+                            <button className='SignOut' onClick={() => handleLogOut()}>Sign Out</button>
                     </div>}
-
-                {isLoggedIn === false &&
-                    <div>
-                        <input className='TestInput' onChange={e => handleChange(e)} ></input>
-                        <button className='SignIn' onClick={() => handleSelectUser(showInput)}>Sign In</button>
-                    </div>
-                }
-                {isLoggedIn === true &&
-                    <button className='SignOut' onClick={() => handleLogOut()}>Sign Out</button>}
             </div>
             {isLoggedIn === true &&
                 <div className='AppointmentDiv'>

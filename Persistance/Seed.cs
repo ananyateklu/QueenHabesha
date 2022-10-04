@@ -20,70 +20,70 @@ namespace Persistence
                     Name = "Abeba Debebe",
                     Date = DateTime.Now.AddMonths(-2),
                     Price = 50,
-                    Stylist = "Helen",
+                    Stylist = "H",
                 },
                 new Appointment
                 {
                     Name = "Alitash Ayalu",
                     Date = DateTime.Now.AddMonths(-1),
                     Price = 30,
-                    Stylist = "Helen",
+                    Stylist = "H",
                 },
                 new Appointment
                 {
                     Name = "Ayana Burka",
                     Date = DateTime.Now.AddMonths(0),
                     Price = 50,
-                    Stylist = "Mekdes",
+                    Stylist = "M",
                 },
                 new Appointment
                 {
                     Name = "Dinkinesh Alemu",
                     Date = DateTime.Now.AddMonths(1),
                     Price = 80,
-                    Stylist = "Helen",
+                    Stylist = "H",
                 },
                 new Appointment
                 {
                     Name = "Bemnet Yelma",
                     Date = DateTime.Now.AddMonths(2),
                     Price = 100,
-                    Stylist = "Helen",
+                    Stylist = "H",
                 },
                 new Appointment
                 {
                     Name = "Fikir Alula",
                     Date = DateTime.Now.AddMonths(3),
                     Price = 60,
-                    Stylist = "Mekdes",
+                    Stylist = "M",
                 },
                 new Appointment
                 {
                    Name = "Dessie Ayele",
                     Date = DateTime.Now.AddMonths(6),
                     Price = 50,
-                    Stylist = "Mekdes",
+                    Stylist = "M",
                 },
                 new Appointment
                 {
                     Name = "Feven Dawit",
                     Date = DateTime.Now.AddMonths(5),
                     Price = 70,
-                    Stylist = "Helen",
+                    Stylist = "H",
                 },
                 new Appointment
                 {
                     Name = "Helina Haile",
                     Date = DateTime.Now.AddMonths(5),
                     Price = 70,
-                    Stylist = "Mekdes",
+                    Stylist = "M",
                 },
                 new Appointment
                 {
                     Name = "Dimber Sena",
                     Date = DateTime.Now.AddMonths(1),
                     Price = 40,
-                    Stylist = "Helen",
+                    Stylist = "H",
                 }
             };
 
