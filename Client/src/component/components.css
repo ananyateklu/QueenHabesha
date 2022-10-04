@@ -144,22 +144,49 @@ h5 {
 }
 .OurCrew h2 {
   font-weight: 400;
+  font-size: 25px;
   margin: 5px;
 }
 .OurCrew h3 {
-  font-weight: 400;
-  font-size: medium;
+  font-weight: 700;
+  font-size: 15px;
+  color: rgb(99, 99, 99);
+  margin: 5px;
+  margin-bottom: 30px;
 }
 .OurCrew div {
   display: inline-block;
-  background-color: #9e8401ab;
+  background-color: white;
   margin: 100px 80px 10px 80px;
-  width: 18em;
+  border-radius: 15px;
+  width: 16em;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 10px 10px 20px 10px;
+}
+
+.OurCrew .facebook {
+  border: none;
+  border-radius: 0;
+  width: 20px;
+  margin-top: 0px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.OurCrew .instagram {
+  border: none;
+  border-radius: 0;
+  width: 20px;
+  margin-top: 0;
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .OurCrew img {
-  width: 17em;
-  margin-top: 8px;
+  width: 8em;
+  border: 3px #DAA520 solid;
+  border-radius: 100%;
+  margin-top: 30px;
 }
 
 .OurCrew ul {
