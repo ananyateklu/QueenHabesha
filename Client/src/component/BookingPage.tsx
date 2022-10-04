@@ -4,6 +4,7 @@ import { format, parseISO } from 'date-fns';
 
 const Helen = require("../assets/Helen.png");
 const Mekdes = require("../assets/Mekdes.jpg");
+const LoginPic = require("../assets/Hair17.jpg");
 const BookingPage = () => {
 
     const [appointments, setAppointments] = useState<Appointment[] | undefined>([]);
@@ -93,13 +94,15 @@ const BookingPage = () => {
 
                 {isLoggedIn === false &&
                     <div className='HairStylistDiv'>
-                        <div><h3>MAKE APPOINTMENT</h3>
+                        <div className='LoginDiv'>
+                            <h3>MAKE APPOINTMENT</h3>
                             <h6>Login in to make an appointment or view your appointment.</h6>
                             <div>
                                 <input className='TestInput' onChange={e => handleChange(e)} ></input>
                                 <button className='SignIn' onClick={() => handleSelectUser(showInput)}>Sign In</button>
                             </div>
                         </div>
+                        <img className='LoginPic' src={LoginPic} alt='LoginPic'></img>
                     </div>
                 }
                 {isLoggedIn === true &&
@@ -108,11 +111,11 @@ const BookingPage = () => {
                             <img src={Helen} alt="Hair Styles" />}
                         {user?.name === "Mekdes Hailu" &&
                             <img src={Mekdes} alt="Hair Styles" />}
-                        <h4>{user?.name}</h4>
                         {user?.name === "Helen Hailu" &&
                             <h6>Hello! This are the list of appointments you have</h6>}
                         {user?.name === "Mekdes Hailu" &&
                             <h6>Hello! This are the list of appointments you have</h6>}
+                            <h4>{user?.name}</h4>
                             <button className='SignOut' onClick={() => handleLogOut()}>Sign Out</button>
                     </div>}
             </div>
