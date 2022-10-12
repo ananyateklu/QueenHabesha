@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState, React } from "react";
 import styleImages from "./styleImages";
-const Salon = require("../assets/Salon.jpg");
+const Salon = require("../assets/QueenFront.png");
 const Braids = require("../assets/Braids.png");
 const Afro = require("../assets/Afro.png");
 const Curls = require("../assets/Curly.png");
