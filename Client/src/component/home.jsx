@@ -22,6 +22,7 @@ const quote = require("../assets/quote.png")
 const user1 = require("../assets/user1.jpg")
 const user2 = require("../assets/user2.jpg")
 const user3 = require("../assets/user3.jpg")
+const sectionb = require("../assets/section-break.png")
 
 const Home = () => {
   const [width, setWidth] = useState(0);
@@ -62,8 +63,13 @@ const Home = () => {
       <div className="ServicesHome" id="Services">
        <Service />
       </div>
+      <div className="section-break" >
+        <img  src={sectionb} alt="breaks"></img>
+        </div>
+        
       <div className="OurCrew">
         <h1>OUR CREW</h1>
+       
         <div>
           <img src={Helen} alt="Straight"></img>
           <h2>Helen Hailu</h2>
