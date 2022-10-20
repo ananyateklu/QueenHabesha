@@ -1,7 +1,37 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .Logo {
   width: 300px;
   margin-left: 15px;
   margin-top: 8px;
+}
+
+.link {
+  width: 100%;
+  padding: 0;
+  padding-top: 20px;
+  margin-left: 20px;
+  position: relative;
+  display: block;
+  font-size: large;
+  color: black;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  right: 15px;
+}
+
+.Burger {
+  display: none;
+}
+.Burgerstuff {
+  display: none;
 }
 
 ul {
@@ -54,7 +84,7 @@ li a {
 .Salon {
   width: 100%;
   margin-bottom: 100px;
-  margin-top: 5px;
+  margin-top: 80px;
 }
 
 .FooterDiv {
@@ -72,7 +102,7 @@ li a {
   display: inline-block;
 }
 
-h5 {
+.FooterLeft h5 {
   color: rgba(255, 255, 255, 0.884);
   margin-left: 50px;
   margin-bottom: 30px;
@@ -105,29 +135,29 @@ h5 {
   text-align: center;
 }
 
-.ServicesHome img {
+.Services img {
   width: 6em;
   padding: 10px 80px 10px 80px;
   margin-top: 50px;
 }
 
-.ServicesHome div {
+.Services div {
   display: inline-block;
 }
 
-.ServicesHome h1 {
+.Services h1 {
   font-weight: 500;
 }
-.ServicesHome h2 {
+.Services h2 {
   font-weight: 300;
 }
 
-.ServicesHome ul {
+.Services ul {
   padding: 0;
   margin-top: 50px;
 }
 
-.ServicesHome li {
+.Services li {
   width: 10em;
   display: block;
   margin-left: auto;
@@ -160,7 +190,9 @@ h5 {
   margin: 100px 80px 10px 80px;
   border-radius: 15px;
   width: 16em;
-  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   padding: 10px 10px 20px 10px;
 }
 
@@ -184,7 +216,7 @@ h5 {
 
 .OurCrew img {
   width: 8em;
-  border: 3px #DAA520 solid;
+  border: 3px #daa520 solid;
   border-radius: 100%;
   margin-top: 30px;
 }
@@ -205,17 +237,16 @@ h5 {
   background-color: white;
   margin-right: 10%;
   margin-left: 10%;
-  height: 45em;
-  margin-top: 5%;
+  height: 50em;
   text-align: center;
 }
 .ContactUs img {
-  height: 45em;
+  height: 50em;
   float: right;
 }
 .ContactUsInfo {
   text-align: left;
-  margin-top: 30px;
+  margin-top: 100px;
   margin-left: 30px;
   display: inline-block;
   width: 40%;
@@ -261,6 +292,7 @@ h5 {
 
 .Booking {
   width: auto;
+  margin-top: 100px;
   border-radius: 10px;
   display: inline-block;
 }
@@ -364,7 +396,7 @@ h5 {
   margin: 20px;
 }
 
-#signInDiv  {
+#signInDiv {
   background-color: transparent;
   border: none;
   margin-top: 20px;
@@ -494,20 +526,16 @@ h5 {
   width: auto;
 }
 
-
-
 .container {
-  
   margin-top: 80px;
-  
+
   justify-content: center;
   height: 65vh;
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden; 
-  
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+
   margin: 0;
   padding: 0;
-  
 }
 
 .swiper-container {
@@ -521,46 +549,40 @@ h5 {
   width: 320px;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 15px 50px rgba(0,0,0,0.04);
-  filter:blur(4px);
-
-  
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.04);
+  filter: blur(4px);
 }
 
-.swiper-slide-active
-{
-  filter:blur(0px);
+.swiper-slide-active {
+  filter: blur(0px);
   background: #fff;
 }
 
-.testimonialBox{
+.testimonialBox {
   position: relative;
   width: 100%;
   padding: 40px;
   padding-top: 55px;
   color: #999;
   box-sizing: border-box;
-  
 }
 
-.testimonialBox .quote{
+.testimonialBox .quote {
   position: absolute;
   top: 20px;
-  right:30px;
+  right: 30px;
   opacity: 0.2;
   width: 50px;
   height: 50px;
 }
 
-.testimonialBox .details
-{
+.testimonialBox .details {
   display: flex;
   align-items: center;
   margin-top: 20px;
 }
 
-.testimonialBox .details .imgBx
-{
+.testimonialBox .details .imgBx {
   position: relative;
   width: 60px;
   height: 60px;
@@ -569,62 +591,261 @@ h5 {
   margin-right: 10px;
 }
 
-.testimonialBox .details .imgBx img
-{
+.testimonialBox .details .imgBx img {
   position: absolute;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
- 
-  
 }
 
-.testimonialBox .details h3
-{
-   font-size: 16px;
-   font-weight: 400;
-   letter-spacing: 1px;
-   color: #2196f3;
-   line-height: 1.1em;
+.testimonialBox .details h3 {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #2196f3;
+  line-height: 1.1em;
 }
 
-.testimonialBox .details h3 span
-{
-   font-size: 12px;
-   
-   color: #666;
-  
+.testimonialBox .details h3 span {
+  font-size: 12px;
+
+  color: #666;
 }
 
-.swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right
-{
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
   background-image: none;
 }
 
-.section-break img{
-  width:100%;
-  transform:scale(0.8);
+.section-break img {
+  width: 100%;
+  transform: scale(0.8);
   padding-top: 150px;
   padding-bottom: 0px;
   opacity: 0.7;
 }
 
+.SalonMobile {
+  display: none;
+}
+.ServicesMobile {
+  display: none;
+}
+.Testimonials {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.Testimonials h1 {
+  font-weight: 500;
+}
 
+.LogoMobile {
+  display: none;
+}
 
-
+.head {
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  background-color: #f2f5f6;
+}
 
 @media only screen and (max-width: 600px) {
-  .Logo {
+  .LogoMobile {
+    display: inline;
     width: 300px;
     margin-left: 0;
   }
 
+  .Logo {
+    display: none;
+  }
+
+  .OurCrew {
+    text-align: center;
+    margin-top: 100px;
+  }
   .OurCrew div {
+    margin: 30px;
+    background-color: white;
+  }
+
+  .Testimonials {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  .Testimonials h1 {
+    font-weight: 500;
+  }
+  .Burger {
+    position: fixed;
+    right: 20px;
+    top: 25px;
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+  .Bur {
+    color: black;
+    height: 40px;
+    width: 40px;
+    float: right;
+  }
+  .LinkDiv {
+    display: none;
+    margin-top: 0px;
+  }
+
+  .LinkDivMobile {
+    z-index: 3;
+    background-color: #f2f5f6;
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .Desktop {
+    display: none;
+  }
+  .SalonMobile {
     display: inline-block;
+    width: 100%;
+  }
+
+  .item {
+    max-height: 21rem;
+    min-width: 17.3rem;
+    padding: 55px;
+    touch-action: none;
+  }
+
+  .item img {
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-radius: 2em;
+  }
+
+  .inner-carousel {
+    display: flex;
+  }
+
+  .carousel {
+    cursor: grab;
+    overflow: hidden;
+    margin-bottom: 150px;
+  }
+
+  .Services {
+    display: none;
+  }
+
+  .ServicesMobile {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .ServicesMobile img {
+    width: 6em;
+    padding: 0px 30px 10px 30px;
+    margin-top: 50px;
+  }
+
+  .ServicesMobile div {
+    display: inline-block;
+  }
+
+  .ServicesMobile h1 {
+    font-weight: 500;
+  }
+  .ServicesMobile h2 {
+    font-weight: 300;
+  }
+
+  .ServicesMobile ul {
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .ServicesMobile li {
+    width: 10em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section-break {
+    display: none;
+  }
+  .container {
+    margin-top: 80px;
+
+    justify-content: center;
+    height: 60vh;
+    font-family: "Poppins", sans-serif;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+  }
+  .FooterDiv {
+    background-color: black;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    height: auto;
+  }
+  
+  .FooterLeft {
+    width: 69%;
+    position: relative;
+    display: inline-block; 
+    margin-left: 0;
+  }
+
+  .FooterLeft h5 {
+    color: rgba(255, 255, 255, 0.884);
+    margin-left: 15px;
+    margin-bottom: 30px;
+  }
+
+  .FooterLogo {
+    width: 350px;
     margin-left: 0px;
-    background-color: red;
-    margin: 100px 80px 10px 80px;
+}
+
+  .Links {
+    width: 31%;
+    position: relative;
+    margin-top: 100px;
+    margin-right: 0px;
+    display: inline-block; 
+  }
+  
+  .Links ul li {
+    color: rgba(255, 255, 255, 0.884);
+    margin-bottom: 25px;
+  }
+
+  .Links ul {
+    margin-left: 0px;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  .BookingButtonDark {
+    border: solid 2px gray;
+    padding: 5px 20px 5px 20px;
+    color: rgba(255, 255, 255, 0.884);
+    margin-left: 15px;
+    width: 140px;
   }
 }
