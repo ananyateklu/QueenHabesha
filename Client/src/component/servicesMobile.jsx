@@ -26,12 +26,8 @@ const Service = () => {
   }, [control, inView]);
 
   return (
-    <motion.div
-      className="Services"
-      ref={ref}
-      variants={boxVariant}
-      initial="hidden"
-      animate={control}
+    <div
+      className="ServicesMobile"
     >
        <h1>SERVICES WE OFFER</h1>
         <div>
@@ -59,7 +55,7 @@ const Service = () => {
         <ul>
           <li className='BookingButton'>BOOKING</li>
         </ul>
-    </motion.div>
+    </div>
   );
 };
 
