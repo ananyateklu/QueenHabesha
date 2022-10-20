@@ -653,6 +653,10 @@ li a {
   background-color: #f2f5f6;
 }
 
+.ser-img:hover{
+transform: scale(1.4);
+}
+
 @media only screen and (max-width: 600px) {
   .LogoMobile {
     display: inline;

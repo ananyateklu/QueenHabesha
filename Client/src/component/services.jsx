@@ -34,25 +34,25 @@ const Service = () => {
       animate={control}
     >
        <h1>SERVICES WE OFFER</h1>
-        <div>
+        <div className="ser-img">
           <img src={Braids} alt="Braids"></img>
           <h2>BRAIDS</h2>
         </div>
-        <div>
+        <div className="ser-img">
           {" "}
           <img src={Locks} alt="Locks"></img>
           <h2>LOCKS</h2>
         </div>
-        <div>
+        <div className="ser-img">
           <img src={Afro} alt="Afro"></img>
           <h2>AFRO</h2>
         </div>
-        <div>
+        <div className="ser-img">
           {" "}
           <img src={Curls} alt="Curls"></img>
           <h2>CURLS</h2>
         </div>
-        <div>
+        <div className="ser-img">
           <img src={Straight} alt="Straight"></img>
           <h2>STRAIGHT</h2>
         </div>
