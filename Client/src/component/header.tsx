@@ -39,16 +39,16 @@ const Header = () => {
                     <GiHamburgerMenu onClick={() => expandNav()} className="Bur" />
                 </div>
                 <div className="Burgerstuff" style={{ display: tab_class }}>
-                    <Link className="link" to="/">
+                    <Link className="link" to="/" onClick={() => expandNav()}>
                         HOME
                     </Link>
-                    <Link className="link" to="/">
+                    <Link className="link" to="/" onClick={() => expandNav()}>
                         OUR CREW
                     </Link>
-                    <Link className="link" to="/contactus">
+                    <Link className="link" to="/contactus" onClick={() => expandNav()}>
                         CONTACT US
                     </Link>
-                    <Link className="link" to="/booking">
+                    <Link className="link" to="/booking" onClick={() => expandNav()}>
                         BOOKING
                     </Link>
                 </div>

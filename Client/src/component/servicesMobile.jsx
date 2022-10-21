@@ -1,30 +1,12 @@
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import React from "react";
 const Braids = require("../assets/Braids.png");
 const Afro = require("../assets/Afro.png");
 const Curls = require("../assets/Curly.png");
 const Straight = require("../assets/Straight.png");
 const Locks = require("../assets/Locks.png");
 
-const boxVariant = {
-  visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
-  hidden: { opacity: 0, scale: 0 }
-};
 
 const Service = () => {
-
-  const control = useAnimation();
-  const [ref, inView] = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      control.start("visible");
-    } else {
-      control.start("hidden");
-    }
-  }, [control, inView]);
-
   return (
     <div
       className="ServicesMobile"

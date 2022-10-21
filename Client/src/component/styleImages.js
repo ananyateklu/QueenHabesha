@@ -1,6 +1,5 @@
 import image1 from '../assets/Hair1.jpg'
 import image2 from '../assets/Hair2.jpg'
-import image3 from '../assets/Hair3.jpg'
 import image4 from '../assets/Hair4.jpg'
 import image5 from '../assets/Hair5.jpg'
 import image6 from '../assets/Hair6.jpg'
@@ -18,5 +17,5 @@ import image17 from '../assets/Hair17.jpg'
 import image19 from '../assets/Hair19.jpg'
 import image20 from '../assets/Hair20.jpg'
 
-const imageArray = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image19, image20];
+const imageArray = [image1, image2, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image19, image20];
 export default imageArray;
