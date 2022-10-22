@@ -3,7 +3,7 @@ import { useRef, useEffect, useState, React } from "react";
 import styleImages from "./styleImages";
 import Service from "./services";
 import ServiceMobile from "./servicesMobile";
-
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 
@@ -18,7 +18,6 @@ const SalonMobile = require("../assets/SalonMobile.jpg");
 const Salon = require("../assets/QueenFront.png");
 const Helen = require("../assets/Helen.png");
 const Mekdes = require("../assets/Mekdes.jpg");
-const Facebook = require("../assets/facebook-logo.png");
 const Instagram = require("../assets/instagram.png");
 const quote = require("../assets/quote.png");
 const user1 = require("../assets/user1.jpg");
@@ -83,18 +82,17 @@ const Home = () => {
           <img src={Helen} alt="Straight"></img>
           <h2>Helen Hailu</h2>
           <h3>Hair Stylist</h3>
-          <img className="facebook" src={Facebook} alt="Curls"></img>
-          <img className="instagram" src={Instagram} alt="Curls"></img>
+          <a target="_blank" rel="noreferrer" href="https://www.instagram.com/hhailu401/" ><img className="instagram" src={Instagram} alt="Curls"></img></a>
         </div>
         <div>
           <img src={Mekdes} alt="Straight"></img>
           <h2>Mekdes</h2>
           <h3>Hair Stylist</h3>
-          <img className="facebook" src={Facebook} alt="Curls"></img>
-          <img className="instagram" src={Instagram} alt="Curls"></img>
+          <a target="_blank" rel="noreferrer"  href="https://www.instagram.com/hhailu401/"><img className="instagram" src={Instagram} alt="Curls"></img></a>
+          
         </div>
         <ul>
-          <li className="BookingButton">CONTACT US</li>
+          <li className="BookingButton"><Link to="/contactus">CONTACT US</Link></li>
         </ul>
       </div>
       <div className="Testimonials">

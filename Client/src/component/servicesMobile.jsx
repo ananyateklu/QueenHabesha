@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const Braids = require("../assets/Braids.png");
 const Afro = require("../assets/Afro.png");
 const Curls = require("../assets/Curly.png");
@@ -35,7 +36,7 @@ const Service = () => {
           <h2>STRAIGHT</h2>
         </div>
         <ul>
-          <li className='BookingButton'>BOOKING</li>
+        <li className='BookingButton'><Link to="/booking">BOOKING</Link></li>
         </ul>
     </div>
   );

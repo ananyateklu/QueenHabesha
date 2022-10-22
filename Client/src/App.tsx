@@ -19,9 +19,9 @@ const App: React.FC = () => {
           <Route path="/booking" element={<Booking />} />
         </Routes>
 
-
+        <Footer />
       </Router>
-      <Footer />
+     
     </div>
   );
 }

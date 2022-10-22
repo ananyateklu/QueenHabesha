@@ -1,11 +1,13 @@
 import React from "react";
 import Gmap from "./googlemaps.component";
+import { Link } from "react-router-dom";
+import GmapMobile from "./googlemapsMobile.component";
 const Hair = require("../assets/Hair3.jpg");
 
 export default class ContactUs extends React.Component {
   render() {
     return (
-      <div className="ContactUs">
+      <div className="ContactUsMain">
         <div className="Contact">
           <div className="ContactContent">
             <div className="ContactUsInfo">
@@ -20,12 +22,17 @@ export default class ContactUs extends React.Component {
                 {/* Google maps */}
                 <Gmap layout="R" />
               </div>
+              <div className="DivMapMobile">
+                 {/* Google maps */}
+              <GmapMobile layout="R" />
+              </div>
               <ul>
-                <li className="BookingButtonContact">Book Appointment</li>
+                <li className="CallButtonContact"><a href="tel:+13014331934">Call + 1 (301) 433- 1934</a></li>
+                <li className="BookingButtonContact"><Link to="/booking">Book Appointment</Link></li>
               </ul>
             </div>
 
-            <img src={Hair} alt="Contact Us"></img>
+            <img src={Hair} className="ContactImg" alt="Contact Us"></img>
           </div>
         </div>
       </div>
