@@ -18,6 +18,7 @@
   right: 15px;
 }
 
+
 .Burger {
   display: none;
 }
@@ -63,6 +64,21 @@ ul {
 .LinkDiv {
   float: right;
   margin-top: 10px;
+}
+
+.linkoff {
+  padding: 0px;
+  background-color: transparent;
+  color: black;
+  z-index: 1000;
+}
+
+.linkoff:hover {
+  padding: 0px;
+  background-color: transparent;
+  padding-bottom: 8px;
+  border-bottom: 2.5px solid black;
+  color: black;
 }
 
 .BookingButton {
@@ -730,6 +746,10 @@ ul {
     width: 40px;
     float: right;
   }
+  .Burgerstuff {
+    display: inline-block;
+    height: 190px;
+  }
   .LinkDiv {
     display: none;
     margin-top: 0px;
@@ -982,7 +1002,7 @@ ul {
     text-align: left;
     border-radius: 30px;
     background-color: white;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-right: auto;
     margin-left: auto;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
@@ -1150,5 +1170,10 @@ ul {
   }
   .Divmap {
     display: none;
+  }
+  .FooterDiv {
+    background-color: black;
+    height: 350px;
+    margin-top: 30px;
   }
 }
