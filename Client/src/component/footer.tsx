@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "react-router-dom"
 const FooterLogo = require("../assets/FooterLogo.png")
 
 const footer = () => {
@@ -16,10 +17,10 @@ const footer = () => {
 
       <div className='Links'>
         <ul>
-          <li>HOME</li>
-          <li>SERVICES</li>
-          <li>OURCREW</li>
-          <li>CONTACT US</li>
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/">SERVICES</Link></li>
+          <li><Link to="/">OURCREW</Link></li>
+          <li><Link to="/contactus">CONTACT US</Link></li>
         </ul>
       </div>
 
