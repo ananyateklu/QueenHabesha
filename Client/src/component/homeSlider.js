@@ -8,7 +8,7 @@ const img1 = require("../assets/QueenFront.png");
 export default class SimpleSlider extends Component {
     render() {
       const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         
         slidesToShow: 1,

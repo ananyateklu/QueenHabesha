@@ -1,3 +1,13 @@
+/* Webfont: Merchant-Black */@font-face {
+  font-family: 'MerchantBlack';
+  src: url('../assets/Web-PS/Merchant-Black.woff2') format('woff2'), /* Modern Browsers */
+       url('../assets/Web-PS/Merchant-Black.otf') format('opentype'); /* Safari, Android, iOS */
+           font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+
 .Logo {
   width: 300px;
   margin-left: 15px;
@@ -33,6 +43,7 @@ ul {
 .LinkDiv li {
   display: inline;
   margin-right: 60px;
+
 }
 
 .LinkDiv li a {
@@ -64,6 +75,7 @@ ul {
 .LinkDiv {
   float: right;
   margin-top: 10px;
+  font-family: MerchantBlack;
 }
 
 .linkoff {
