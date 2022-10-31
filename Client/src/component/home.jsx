@@ -5,6 +5,7 @@ import Service from "./services";
 import ServiceMobile from "./servicesMobile";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SimpleSlider from "./homeSlider";
 
 
 // Import Swiper styles
@@ -15,7 +16,7 @@ import "swiper/css/autoplay";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 
 const SalonMobile = require("../assets/SalonMobile.jpg");
-const Salon = require("../assets/QueenFront.png");
+
 const Helen = require("../assets/Helen.png");
 const Mekdes = require("../assets/Mekdes.jpg");
 const Instagram = require("../assets/instagram.png");
@@ -37,11 +38,12 @@ const Home = () => {
   return (
     <div className="Home">
       <div className="Desktop">
-        <img className="Salon" src={Salon} alt="Salon" />
+      <SimpleSlider/>
       </div>
       <div>
         <img className="SalonMobile" src={SalonMobile} alt="Salon" />
       </div>
+      <div className='childh'>
       <motion.div
         ref={carousel}
         className="carousel"
@@ -66,7 +68,8 @@ const Home = () => {
           })}
         </motion.div>
       </motion.div>
-      <div className="ServicesHome" id="Services">
+      </div>
+      <div className="ServicesHome " id="Services" >
           <Service />
           <ServiceMobile />
       
