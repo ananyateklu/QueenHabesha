@@ -27,11 +27,11 @@ export default class SimpleSlider extends Component {
        
           
           <Slider {...settings}>
-          <div class="single-img kenburns-top-right">
+          <div class="single-img kenburns-top">
                 <img src={img1} alt=""/>
                 <h2>ONE</h2>
             </div>
-            <div class="single-img kenburns-top-right">
+            <div class="single-img kenburns-top">
             <img src={img1} alt=""/>
                 <h2>TWO</h2>
             </div>
