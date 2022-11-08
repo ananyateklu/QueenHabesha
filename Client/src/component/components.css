@@ -1,6 +1,6 @@
 /* Webfont: Merchant-Black */@font-face {
   font-family: 'MerchantBlack';
-  src: url('../assets/Web-PS/NT\ Vanilla.otf') format('woff2'), /* Modern Browsers */
+  src: url('../assets/Web-PS/ShockaSerif-Bold.otf') format('woff2'), /* Modern Browsers */
        url('../assets/Web-PS/Merchant-Black.otf') format('opentype'); /* Safari, Android, iOS */
            font-style:normal;
   font-weight: bolder;
