@@ -14,8 +14,17 @@ const Header = () => {
 
   return (
     <div className="head">
+<div className="Deskhead">
       <div className="LogoDiv">
-        <img className="Logo" src={logo} alt="logo" />
+        <div className="logo-img">
+
+        </div>
+        <div className="BrandName">
+            QUEEN HABESHA
+        </div>
+        <div className="BrandName-small">
+            HAIR BRAIDING
+        </div>
       </div>
 
       <div className="LinkDiv">
@@ -51,6 +60,7 @@ const Header = () => {
             <NavLink to="/booking">BOOKING</NavLink>
           </li>
         </ul>
+      </div>
       </div>
 
       <div className="LinkDivMobile">
