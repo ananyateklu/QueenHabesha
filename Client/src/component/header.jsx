@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 import "./components.css";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink,Link} from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
-import {useRef} from 'react';
+import { HashLink } from 'react-router-hash-link';
+
+
 const logo = require("../assets/final-logo-trans.png");
 
 const Header = () => {
   const [mobile, setMobile] = useState(true);
   const tab_class = mobile ? "none" : "block";
 
-  const ref = useRef(null);
-  const handleClick = () => {
-    ref.current?.scrollIntoView({behavior: 'smooth'});
-  };
+  
 
   function expandNav() {
     setMobile(!mobile);
@@ -40,21 +39,27 @@ const Header = () => {
         <ul>
           <li>
             <NavLink exact="true" className="linkoff" to="/">
-              HOME
+            <HashLink smooth to="/#Home">
+                HOME
+            </HashLink>
             </NavLink>
           </li>
 
-          <li
+          <li>
             
-          >
-            <NavLink className="linkoff" to="/">
-              SERVICES
-            </NavLink>
+              <NavLink className="linkoff"  to="#service">
+              <HashLink smooth to="/#services">
+                SERVICES
+            </HashLink>
+              </NavLink>
+            
           </li>
 
-          <li onClick={handleClick}>
+          <li >
             <NavLink className="linkoff" to="/">
-              OUR CREW
+            <HashLink smooth to="/#ourcrew">
+                OUR CREW
+            </HashLink>
             </NavLink>
           </li>
           <li>

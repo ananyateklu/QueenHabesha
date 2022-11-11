@@ -4,8 +4,11 @@ import styleImages from "./styleImages";
 import Service from "./services";
 import ServiceMobile from "./servicesMobile";
 import { Link } from "react-router-dom";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import SimpleSlider from "./homeSlider";
+
+
 
 
 
@@ -37,13 +40,14 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="Home">
+    <div className="Home" id="Home">
       <div className="Desktop">
       <SimpleSlider/>
       </div>
       <div>
         <img className="SalonMobile" src={SalonMobile} alt="Salon" />
       </div>
+      
       <div className='childh'>
       <motion.div
         ref={carousel}
@@ -70,7 +74,7 @@ const Home = () => {
         </motion.div>
       </motion.div>
       </div>
-      <div className="ServicesHome " id="Services"  >
+      <div className="ServicesHome " id="services"  >
           <Service />
           <ServiceMobile />
       
@@ -79,7 +83,7 @@ const Home = () => {
         <img src={sectionb} alt="breaks"></img>
       </div>
 
-      <div ref={ref} className="OurCrew">
+      <div ref={ref} className="OurCrew" id="ourcrew">
         <h1>OUR CREW</h1>
 
         <div>

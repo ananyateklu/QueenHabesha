@@ -23,7 +23,7 @@
     text-rendering: optimizeLegibility;
     }
 
-
+   
 body{
   font-family: MerchantBlack;
 }
@@ -167,6 +167,16 @@ ul {
   color: black;
   text-decoration: none;
 }
+.BookingButton:hover {
+  border: solid 2px green;
+  padding: 5px 20px 5px 20px;
+  background-color: #000;
+  color:white;
+}
+
+.BookingButton a:hover {
+  color:white;
+}
 
 .BookingButtonDark {
   border: solid 2px gray;
@@ -228,6 +238,7 @@ ul {
 
 .ServicesHome {
   text-align: center;
+  padding-top:45px;
 }
 
 .Services img {
@@ -261,7 +272,8 @@ ul {
 
 .OurCrew {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 50px;
+  padding-top: 50px;
 }
 
 .OurCrew h1 {
@@ -795,7 +807,7 @@ ul {
 }
 
 .ser-img:hover {
-  transform: scale(1.4);
+  transform: scale(1.15);
 }
 
 .DivMap {

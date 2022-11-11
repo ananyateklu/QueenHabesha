@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from "react-router-dom"
+import { HashLink } from 'react-router-hash-link'
 const FooterLogo = require("../assets/FooterLogo.png")
+
 
 const footer = () => {
   return (
@@ -18,7 +20,9 @@ const footer = () => {
       <div className='Links'>
         <ul>
           <li><Link to="/">HOME</Link></li>
-          <li><Link to="/">SERVICES</Link></li>
+          <li><Link to="/"><HashLink smooth to="/#services">
+                SERVICES
+            </HashLink></Link></li>
           <li><Link to="/">OURCREW</Link></li>
           <li><Link to="/contactus">CONTACT US</Link></li>
         </ul>
