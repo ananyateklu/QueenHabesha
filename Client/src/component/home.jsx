@@ -8,6 +8,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SimpleSlider from "./homeSlider";
 
 
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -29,7 +30,7 @@ const sectionb = require("../assets/section-break.png");
 const Home = () => {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
-
+  const ref = useRef(null);
   useEffect(() => {
     console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
@@ -69,7 +70,7 @@ const Home = () => {
         </motion.div>
       </motion.div>
       </div>
-      <div className="ServicesHome " id="Services" >
+      <div className="ServicesHome " id="Services"  >
           <Service />
           <ServiceMobile />
       
@@ -78,7 +79,7 @@ const Home = () => {
         <img src={sectionb} alt="breaks"></img>
       </div>
 
-      <div className="OurCrew">
+      <div ref={ref} className="OurCrew">
         <h1>OUR CREW</h1>
 
         <div>

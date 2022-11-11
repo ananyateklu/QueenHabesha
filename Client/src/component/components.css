@@ -56,7 +56,13 @@ grid-gap: 10px;
   background-color: #daa520;
   width: 8rem;
   height:auto;
+  align-content: center;
+  padding-left:57px;
   
+}
+.logo-img img{
+  max-width: 100%;
+  max-height: 100%;
 }
 .BrandName{
    grid-area: 1/2/2/3;

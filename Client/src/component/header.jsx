@@ -2,22 +2,31 @@ import React, { useState } from "react";
 import "./components.css";
 import { NavLink, Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
-const logo = require("../assets/Logo.png");
+import {useRef} from 'react';
+const logo = require("../assets/final-logo-trans.png");
 
 const Header = () => {
   const [mobile, setMobile] = useState(true);
   const tab_class = mobile ? "none" : "block";
 
+  const ref = useRef(null);
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+  };
+
   function expandNav() {
     setMobile(!mobile);
   }
+
+  
+
 
   return (
     <div className="head">
 <div className="Deskhead">
       <div className="LogoDiv">
         <div className="logo-img">
-
+          <img src={logo} alt="logo"/>
         </div>
         <div className="BrandName">
             QUEEN HABESHA
@@ -36,17 +45,14 @@ const Header = () => {
           </li>
 
           <li
-            onClick={(e) => {
-              e.preventDefault();
-              window.location.replace("/#Services");
-            }}
+            
           >
             <NavLink className="linkoff" to="/">
               SERVICES
             </NavLink>
           </li>
 
-          <li>
+          <li onClick={handleClick}>
             <NavLink className="linkoff" to="/">
               OUR CREW
             </NavLink>
