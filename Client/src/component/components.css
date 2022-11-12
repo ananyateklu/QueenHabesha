@@ -169,17 +169,17 @@ ul {
   padding: 5px 20px 5px 20px;
 }
 .BookingButton a {
-  color: black;
+  color: inherit;
   text-decoration: none;
 }
 .BookingButton:hover {
-  border: solid 2px green;
+  border: solid 2px rgb(209, 208, 208);
   padding: 5px 20px 5px 20px;
   background-color: #000;
   color:white;
 }
 
-.BookingButton a:hover {
+.BookingButton:hover a {
   color:white;
 }
 
