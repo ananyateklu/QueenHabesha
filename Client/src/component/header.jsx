@@ -6,6 +6,8 @@ import { HashLink } from 'react-router-hash-link';
 
 
 const logo = require("../assets/final-logo-trans.png");
+const brand = require("../assets/BRANDNAME.png");
+const brandsmall = require("../assets/BRANDSMALL.png");
 
 const Header = () => {
   const [mobile, setMobile] = useState(true);
@@ -28,10 +30,10 @@ const Header = () => {
           <img src={logo} alt="logo"/>
         </div>
         <div className="BrandName">
-            QUEEN HABESHA
+            <img src={brand} alt="brand name"/>
         </div>
         <div className="BrandName-small">
-            HAIR BRAIDING
+        <img src={brandsmall} alt="brandsmall"/>
         </div>
       </div>
 
