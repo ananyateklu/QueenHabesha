@@ -103,7 +103,7 @@ const Home = () => {
           <li className="BookingButton"><Link to="/contactus">CONTACT US</Link></li>
         </ul>
       </div>
-      <div className="Testimonials">
+      <div className="Testimonials" id="testimonial">
         <h1>TESTIMONIALS</h1>
       </div>
       <div className="container">

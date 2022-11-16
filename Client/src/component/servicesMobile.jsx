@@ -35,9 +35,7 @@ const Service = () => {
           <img src={Straight} alt="Straight"></img>
           <h2>STRAIGHT</h2>
         </div>
-        <ul>
-        <li className='BookingButton'><Link to="/booking">BOOKING</Link></li>
-        </ul>
+        
     </div>
   );
 };

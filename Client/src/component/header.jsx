@@ -64,14 +64,19 @@ const Header = () => {
             </HashLink>
             </NavLink>
           </li>
+          <li >
+            <NavLink  className="linkoff" to="/">
+            <HashLink smooth to="/#testimonial">
+              TESTIMONIAL
+              </HashLink>
+            </NavLink>
+          </li>
           <li>
             <NavLink className="linkoff" to="/contactUs">
               CONTACT US
             </NavLink>{" "}
           </li>
-          <li className="BookingButton">
-            <NavLink to="/booking">BOOKING</NavLink>
-          </li>
+          
         </ul>
       </div>
       </div>

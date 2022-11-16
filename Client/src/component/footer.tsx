@@ -30,11 +30,18 @@ const footer = () => {
 
       <div className='Links'>
         <ul>
-          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/"><HashLink smooth to="/#Home">
+                HOME
+            </HashLink></Link></li>
           <li><Link to="/"><HashLink smooth to="/#services">
                 SERVICES
             </HashLink></Link></li>
-          <li><Link to="/">OURCREW</Link></li>
+          <li><Link to="/"><HashLink smooth to="/#ourcrew">
+                OUR CREW
+            </HashLink></Link></li>
+          <li><Link to="/"><HashLink smooth to="/#testimonial">
+                  TESTIMONIAL
+            </HashLink></Link></li>
           <li><Link to="/contactus">CONTACT US</Link></li>
         </ul>
       </div>
