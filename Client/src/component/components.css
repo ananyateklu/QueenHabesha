@@ -1001,11 +1001,11 @@ ul {
 }
 
 @media only screen and (max-width: 600px) {
-  /* .LogoMobile {
+  .LogoMobile {
     display: inline;
     width: 300px;
     margin-left: 0;
-  } */
+  }
 
   .Logo {
     display: none;
