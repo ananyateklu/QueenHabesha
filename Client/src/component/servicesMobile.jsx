@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 const Braids = require("../assets/Braids.png");
 const Afro = require("../assets/Afro.png");
 const Curls = require("../assets/Curly.png");

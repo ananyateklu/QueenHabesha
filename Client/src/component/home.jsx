@@ -22,7 +22,7 @@ import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 const SalonMobile = require("../assets/SalonMobile.jpg");
 
 const Helen = require("../assets/Helen.png");
-const Mekdes = require("../assets/Mekdes.jpg");
+const Mekdes = require("../assets/mekdi.JPEG");
 const Instagram = require("../assets/instagram.png");
 const quote = require("../assets/quote.png");
 const user1 = require("../assets/user1.jpg");
@@ -35,7 +35,6 @@ const Home = () => {
   const carousel = useRef();
   const ref = useRef(null);
   useEffect(() => {
-    console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   }, []);
 
