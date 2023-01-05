@@ -4,7 +4,12 @@ import styleImages from "./styleImages";
 import Service from "./services";
 import ServiceMobile from "./servicesMobile";
 import { Link } from "react-router-dom";
+
 import { Swiper, SwiperSlide } from "swiper/react";
+import SimpleSlider from "./homeSlider";
+
+
+
 
 
 // Import Swiper styles
@@ -15,9 +20,9 @@ import "swiper/css/autoplay";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 
 const SalonMobile = require("../assets/SalonMobile.jpg");
-const Salon = require("../assets/QueenFront.png");
+
 const Helen = require("../assets/Helen.png");
-const Mekdes = require("../assets/Mekdes.jpg");
+const Mekdes = require("../assets/mekdi.JPEG");
 const Instagram = require("../assets/instagram.png");
 const quote = require("../assets/quote.png");
 const user1 = require("../assets/user1.jpg");
@@ -28,20 +33,21 @@ const sectionb = require("../assets/section-break.png");
 const Home = () => {
   const [width, setWidth] = useState(0);
   const carousel = useRef();
-
+  const ref = useRef(null);
   useEffect(() => {
-    console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
     setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   }, []);
 
   return (
-    <div className="Home">
+    <div className="Home" id="Home">
       <div className="Desktop">
-        <img className="Salon" src={Salon} alt="Salon" />
+      <SimpleSlider/>
       </div>
       <div>
         <img className="SalonMobile" src={SalonMobile} alt="Salon" />
       </div>
+      
+      <div className='childh'>
       <motion.div
         ref={carousel}
         className="carousel"
@@ -66,7 +72,8 @@ const Home = () => {
           })}
         </motion.div>
       </motion.div>
-      <div className="ServicesHome" id="Services">
+      </div>
+      <div className="ServicesHome " id="services"  >
           <Service />
           <ServiceMobile />
       
@@ -75,7 +82,7 @@ const Home = () => {
         <img src={sectionb} alt="breaks"></img>
       </div>
 
-      <div className="OurCrew">
+      <div ref={ref} className="OurCrew" id="ourcrew">
         <h1>OUR CREW</h1>
 
         <div>
@@ -95,7 +102,7 @@ const Home = () => {
           <li className="BookingButton"><Link to="/contactus">CONTACT US</Link></li>
         </ul>
       </div>
-      <div className="Testimonials">
+      <div className="Testimonials" id="testimonial">
         <h1>TESTIMONIALS</h1>
       </div>
       <div className="container">
